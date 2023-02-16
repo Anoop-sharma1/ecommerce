@@ -1,4 +1,6 @@
 import React from "react";
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 import { Switch, Route } from "react-router-dom";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
@@ -9,6 +11,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <ToastContainer />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
